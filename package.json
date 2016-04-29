@@ -1,9 +1,23 @@
 {
   "name": "vscode-coffeescript-preview",
-  "displayName": "CoffeeScript Preview",
-  "description": "On demand compilation of coffeescript for inspection",
-  "version": "0.0.1",
-  "publisher": "Drew Barrett",
+  "description": "Provides on demand compilation of CoffeeScript files for inspection",
+  "version": "0.1.0",
+  "publisher": "drewbarrett",
+  "displayName": "Drew Barrett",
+  "galleryBanner": {
+        "color": "#0000FF",
+        "theme": "light"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+        "url": "https://github.com/dcbarrett/vscode-coffeescript-preview/issues",
+        "email": "dcbarr11@gmail.com"
+  },
+  "homepage": "https://github.com/dcbarrett/vscode-coffeescript-preview/blob/master/README.md",
+  "repository": {
+        "type": "git",
+        "url": "https://github.com/dcbarrett/vscode-coffeescript-preview.git"
+  },
   "engines": {
     "vscode": "^1.0.0"
   },
@@ -35,7 +49,6 @@
     "postinstall": "node ./node_modules/vscode/bin/install"
   },
   "devDependencies": {
-    "mockery": "^1.6.2",
     "sinon": "^1.17.3",
     "typescript": "^1.8.5",
     "vscode": "^0.11.0"
