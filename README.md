@@ -2,7 +2,7 @@
 Provides on demand compilation of CoffeeScript files for inspection
 
 ## Requirements
-Visual Studio Code v1.0.0+
+Visual Studio Code >= v1.0.0
 
 ## How to Use
 * Open a CoffeeScript file and:
