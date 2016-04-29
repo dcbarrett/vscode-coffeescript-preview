@@ -5,8 +5,8 @@ import { workspace, Disposable, TextDocumentChangeEvent, Uri, TextDocument, Text
 
 export class WorkspaceService {
 
-    public registerOnDocumentChangeListener(func:(e:TextDocumentChangeEvent)=> void): void {
-        let ll = workspace.onDidChangeTextDocument(func);
+    public registerOnDocumentChangeListener(func:(e:TextDocumentChangeEvent)=> void): Disposable {
+        return workspace.onDidChangeTextDocument(func);
     }
 
     public openTextDocument(uri:Uri): Thenable<TextDocument>{

@@ -1,7 +1,7 @@
 'use strict';
 
 import * as vscode from "vscode";
-import { TextDocumentChangeEvent, Uri, ViewColumn, TextDocument, TextEditor } from "vscode";
+import { TextDocumentChangeEvent, Uri, ViewColumn, TextDocument, TextEditor, Disposable } from "vscode";
 import * as utility from "./utility";
 import { CoffeeScriptPreviewContentProvider } from "./coffeeScriptPreviewContentProvider";
 import { WorkspaceService } from "../vscode/workspaceService";
@@ -20,9 +20,9 @@ export class CoffeeScriptPreview {
         this._windowService = windowService;
     }
 
-    public start(): void {
+    public start(): Disposable {
         const debouncedUpdateContent = utility.debounce(this.updateContent, this._delay, this);
-        this._workspaceService.registerOnDocumentChangeListener((event: TextDocumentChangeEvent) => {
+        return this._workspaceService.registerOnDocumentChangeListener((event: TextDocumentChangeEvent) => {
             if (this.isValidDocument(event.document)){
                 debouncedUpdateContent(event.document.fileName);
             }
