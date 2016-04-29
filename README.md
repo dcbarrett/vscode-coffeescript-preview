@@ -1,13 +1,19 @@
-# README
-## This is the README for your extension "coffeescript-preview"
-You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
+# CoffeeScript Preview
+Provides on demand compilation of CoffeeScript files for inspection
 
-* Split the editor (`Cmd+\` on OSX or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on OSX or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (OSX) to see a list of Markdown snippets
+## Requirements
+Visual Studio Code v1.0.0+
 
-### For more information
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+## How to Use
+* Open a CoffeeScript file and:
+    * ctrl+shift+/
+    * Open the command window and execute the CoffeeScript Preview command
+    
+## Issues
+* Create Issues in the Github repo
 
-**Enjoy!**
+## Source
+[Github](https://github.com/dcbarrett/vscode-coffeescript-preview)
+          
+## License
+[MIT](https://raw.githubusercontent.com/dcbarrett/vscode-coffeescript-preview/master/LICENSE)
