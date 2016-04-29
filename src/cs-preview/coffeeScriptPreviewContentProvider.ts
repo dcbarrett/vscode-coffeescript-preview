@@ -46,6 +46,6 @@ export class CoffeeScriptPreviewContentProvider implements TextDocumentContentPr
     }
 
     private generateErrorMessage(error):string {
-        return `Error: ${error.message}; line: ${error.location.first_line}, column: ${error.location.first_column}]`;
+        return `Error: ${error.message}; line: ${error.location.first_line + 1}, column: ${error.location.first_column + 1}]`;
     }
 }
