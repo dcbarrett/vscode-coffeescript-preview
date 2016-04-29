@@ -1,0 +1,46 @@
+{
+  "name": "vscode-coffeescript-preview",
+  "displayName": "CoffeeScript Preview",
+  "description": "On demand compilation of coffeescript for inspection",
+  "version": "0.0.1",
+  "publisher": "Drew Barrett",
+  "engines": {
+    "vscode": "^1.0.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:extension.coffeescript-preview"
+  ],
+  "main": "./out/src/extension",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.coffeescript-preview",
+        "title": "Coffeescript Preview"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "extension.coffeescript-preview",
+        "key": "ctrl+shift+/",
+        "when": "editorTextFocus && editorLangId == 'coffeescript'"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "node ./node_modules/vscode/bin/compile",
+    "compile": "node ./node_modules/vscode/bin/compile -watch -p ./",
+    "postinstall": "node ./node_modules/vscode/bin/install"
+  },
+  "devDependencies": {
+    "mockery": "^1.6.2",
+    "sinon": "^1.17.3",
+    "typescript": "^1.8.5",
+    "vscode": "^0.11.0"
+  },
+  "dependencies": {
+    "coffee-script": "^1.10.0"
+  }
+}
