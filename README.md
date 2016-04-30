@@ -1,5 +1,7 @@
 # CoffeeScript Preview
-Provides on demand compilation of CoffeeScript files for inspection
+Provides on demand compilation of CoffeeScript files for inspection.
+
+![CoffeeScript Preview Demo](coffeescript-preview-demo.gif)
 
 ## Requirements
 Visual Studio Code >= v1.0.0
