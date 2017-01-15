@@ -1,5 +1,6 @@
 'use strict';
 
+import * as os from "os";
 import * as vscode from "vscode";
 import { TextDocumentChangeEvent, Uri, ViewColumn, TextDocument, TextEditor, Disposable } from "vscode";
 import * as utility from "./utility";
@@ -52,7 +53,8 @@ export class CoffeeScriptPreview {
     }
 
     private generatePreviewUri = (baseUrl:string): Uri => {
-        return Uri.parse(`coffeescript-preview://${baseUrl}.js`);
+        const separator = os.platform() === "win32" ? "\\" : "//";
+        return Uri.parse(`coffeescript-preview:${separator}${baseUrl}.js`);
     }
 
     private getDisplayColumn(currentColummn: ViewColumn): number {
