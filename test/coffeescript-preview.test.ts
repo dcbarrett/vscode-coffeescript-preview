@@ -2,6 +2,7 @@
 
 import * as assert from 'assert';
 import * as vscode from 'vscode';
+import * as os from 'os';
 import { CoffeeScriptPreview } from '../src/cs-preview/coffeeScriptPreview';
 import { CoffeeScriptPreviewContentProvider } from '../src/cs-preview/coffeeScriptPreviewContentProvider';
 import { WorkspaceService } from "../src/vscode/workspaceService";
@@ -51,6 +52,11 @@ describe("CoffeeScriptPreview Tests", () => {
     it("updateContent() will call the content provider to update content", ()=>{
         const stub = sinon.stub(this.provider, "updateContent");
         this.cspreview.updateContent("new_file.coffee");
+        let separator = "//";
+        if (os.platform() === "win32") {
+            separator = "\\";
+        }
+        assert.equal(stub.getCall(0).args[0].toString().includes(separator), true);
         assert.equal(stub.getCall(0).args[0].authority, "new_file.coffee.js");
     });
 
