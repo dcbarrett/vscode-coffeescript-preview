@@ -1,7 +1,7 @@
 "use strict";
 
 import * as vscode from "vscode";
-let coffeescript = require("coffee-script");
+let coffeescript = require("coffeescript");
 import { TextEditor, EventEmitter, Event, TextDocumentContentProvider, Uri } from "vscode";
 import { WindowService } from "../vscode/windowService";
 
